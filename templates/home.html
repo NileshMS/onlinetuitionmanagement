@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for object in object_list %}
+        <div class="container col-lg-4 my-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header" style="background-color: #83abf1">
+                    {{ object.course }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus est illo
+                        ratione recusandae repellat sed voluptas. A aspernatur consequatur cum iste, magnam porro quasi
+                        voluptatem.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'detail' pk=object.courseid %}" class="btn btn-outline-info">Veiw</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
